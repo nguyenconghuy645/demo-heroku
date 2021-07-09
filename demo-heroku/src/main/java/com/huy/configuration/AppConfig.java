@@ -1,6 +1,7 @@
 package com.huy.configuration;
 
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
@@ -25,7 +26,7 @@ import org.thymeleaf.templatemode.TemplateMode;
 @EnableSpringDataWebSupport
 @EnableAspectJAutoProxy
 public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
-
+    @Autowired
     private ApplicationContext applicationContext;
 
     @Override
